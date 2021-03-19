@@ -4,13 +4,15 @@ import math
 import pandas as pd
 import numpy as np
 import psycopg2 as pg
+import config
 
 #define database class
 class DataQ():
 
     def __init__(self, query,
                  db="postgres", server="golden-source-2020.cyozpdhauzu4.us-east-2.rds.amazonaws.com",
-                 user="postgres", pwd="Bcidatabase2020"):
+                 login(config.username, config.password)
+                ):
         self.query      = query
         self.db         = db
         self.server     = server
